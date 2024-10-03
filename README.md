@@ -1,66 +1,12 @@
-## Foundry
+## About
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**FundMe is a simple Foundry project to enable users deposit funds into a smart contract, it makes use of an Aggregator Interface to get price feed from Chainlink address in order to get the value of the minimum amount in USD a user can donate, There is also a Price Converter contract to that checks the current price of Eth from the Aggregator and converts to the required value in USD**
 
-Foundry consists of:
+The Project consist of:
+  - **SRC**: This Contains all the contracts available in the Repo.
+  - **Script**: This Contains the scripts required to deploy and interact with the Contrats.
+  - **Test**: This Contains a folder for Integration test, Unit Test and Mock Aggregator Contract for local deployment.
+  - **Gas-Snapshot**: This contains a gas report from all the contracts in the Project.
+  - **Makefile**: This Contains all Make commands to use when interacting or deploying the contract locally.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
